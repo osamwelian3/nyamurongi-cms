@@ -41,11 +41,12 @@
       "min": 1,
       "max": 5
     },
-    "status": {
+    "moderationStatus": {
       "type": "enumeration",
       "enum": ["pending", "approved", "rejected"],
       "default": "pending",
-      "required": true
+      "required": true,
+      "description": "Named moderationStatus, not status — see the identical note on Comment's field for why (Strapi 5 Admin panel bug strapi/documentation#2293)."
     }
   }
 }

@@ -26,11 +26,12 @@
       "required": true,
       "private": true
     },
-    "status": {
+    "moderationStatus": {
       "type": "enumeration",
       "enum": ["pending", "approved", "rejected"],
       "default": "pending",
-      "required": true
+      "required": true,
+      "description": "Named moderationStatus, not status — Strapi 5's Admin panel has a core bug (strapi/documentation#2293) where a custom field literally named 'status' collides with its own internal draft/publish status concept, on any content type, breaking both display and editing of the field in the Admin UI regardless of draftAndPublish settings."
     },
     "article": {
       "type": "relation",
